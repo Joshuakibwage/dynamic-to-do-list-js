@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             taskList.removeChild(task);
             
         }
+        taskList.appendChild(rmvButton);
     }
  
 });
