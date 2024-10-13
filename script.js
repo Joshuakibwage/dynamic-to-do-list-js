@@ -23,6 +23,17 @@ document.addEventListener('DOMContentLoaded', function() {
             
         }
         taskList.appendChild(rmvButton);
+
+        taskInput.value = '';
+
+        addButton.addEventListener('click', addTask);
+
+        taskInput.addEventListener('keypress', Enter{
+            if(event.key === Enter){
+                
+            }
+        })
+        }
     }
  
 });
