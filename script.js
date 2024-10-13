@@ -4,6 +4,16 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadTasks() {
         const storedTasks = JSON.parse(localStorage.getItem('tasks') || '[]');
         storedTasks.forEach(taskText => addTask(taskText, false)); 
+
+        function addTask(taskText, save = true) {
+
+        
+            if (save) {
+                const storedTasks = JSON.parse(localStorage.getItem('tasks') || '[]');
+                storedTasks.push(taskText);
+                localStorage.setItem('tasks', JSON.stringify(storedTasks));
+            }
+        }
     }
         
     const addButton = document.getElementById('add-task-btn')
@@ -42,4 +52,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
  
 });
-
