@@ -12,14 +12,15 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         let task = document.createElement('li')
-        textContent = taskTest;
+        textContent = taskText;
 
         let rmvButton = document.createElement('Remove')
         rmvButton.textContent = "Remove";
         rmvButton.className = "remove-btn";
 
         rmvButton.onclick = function(){
-            taskList.child = '';
+            taskList.removeChild(task);
+            
         }
     }
  
