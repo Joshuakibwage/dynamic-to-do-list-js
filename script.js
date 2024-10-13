@@ -14,12 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
         let task = document.createElement('li')
         textContent = taskText;
 
-        let rmvButton = document.createElement('Remove')
+        let rmvButton = document.createElement('button')
         rmvButton.textContent = "Remove";
-        rmvButton.className = "remove-btn";
+        rmvButton.classList.add =("remove-btn");
 
         rmvButton.onclick = function(){
             taskList.removeChild(task);
+
             
         }
         taskList.appendChild(rmvButton);
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if(event.key === 'Enter') {
                 addTask();
             }
-        })
+        });
     }
  
 });
