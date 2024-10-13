@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    const addButton = document.getElementById('add-task-btn')
+    const addButton = document.getElementById('add-task')
     const taskInput = document.getElementById('task-input')
     const taskList = document.getElementByiD('task-list')
       
@@ -21,21 +21,19 @@ document.addEventListener('DOMContentLoaded', function() {
         rmvButton.onclick = function(){
             taskList.removeChild(task);
 
-            
         };
         task.appendChild(rmvButton);
         taskList.appendChild(task);
 
         taskInput.value = '';
     }
-        addButton.addEventListener('click', addTask);
+    addButton.addEventListener('click', addTask);
 
-        taskInput.addEventListener('keypress', function(event) {
-            if(event.key === 'Enter') {
-                addTask();
-            }
-        });
-   
+    taskInput.addEventListener('keypress', function(event) {
+        if(event.key === 'Enter') {
+            addTask();
+        }
+    });
  
 });
 
