@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         let task = document.createElement('li')
-        textContent = taskText;
+        li.textContent = taskText;
 
         let rmvButton = document.createElement('button')
         rmvButton.textContent = "Remove";
