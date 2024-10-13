@@ -11,7 +11,16 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Enter a task!');
             return;
         }
-    
+        let task = document.createElement('li')
+        textContent = taskTest;
+
+        let rmvButton = document.createElement('Remove')
+        rmvButton.textContent = "Remove";
+        rmvButton.className = "remove-btn";
+
+        rmvButton.onclick = function(){
+            taskList.child = '';
+        }
     }
  
 });
